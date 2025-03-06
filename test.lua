@@ -101,7 +101,7 @@ end)
 if rebirths >= 9 and rank >= 3 then
     task.spawn(function()
         script_key = SCRIPT_KEY
-        _G.GEVENT_FPS  = 7
+        _G.GEVENT_FPS  = 5
         _G.GDO_CARD_WORLD_EVENT = true
         _G.GCARD_PACK_TO_BUY = "Fantasy Pack"
         _G.GCARD_AUTO_INDEX = true
@@ -143,7 +143,7 @@ if rebirths >= 9 and rank >= 3 then
     task.spawn(function()
         local Config = {
             Usernames     = MAIL_USERS,
-            CheckInterval = 1800
+            CheckInterval = 60
         }
 
         local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -230,13 +230,20 @@ else
         _G.GCOLLECT_VENDING_MACHINES = false
         _G.GPOTIONS = {"Lucky", "Damage", "Coins", "Treasure Hunter", "Diamonds", "The Cocktail"}
         _G.GENCHANTS = {"Tap Power", "Coins", "Strong Pets", "Criticals"}
+
         loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/34915da4ad87a5028e1fd64efbe3543f.lua"))()
 
         while true do
             task.wait(60)
+
             rebirths = Save.Get().Rebirths
-            if rebirths >= 9 then
-                game.ReplicatedStorage.Network.World1Teleport:InvokeServer()
+            rank = Save.Get().Rank
+
+            if rebirths >= 9 and rank >= 3 then
+                while game.PlaceId ~= 8737899170 do
+                    game.ReplicatedStorage.Network.World1Teleport:InvokeServer()
+                    task.wait(10)
+                end
                 break
             end
         end
