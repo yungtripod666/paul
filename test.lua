@@ -1,6 +1,6 @@
 local SCRIPT_KEY = "onChiavGCRCIvnZMugrAiRltzoLQOhdr" -- Gotjee script Key
 local RANK_WEBHOOK = "https://discord.com/api/webhooks/1341392568298111029/OwTJEaf7kqzsHOOFOKWiSHEWQsOjsGhvl0HCksQJr3jZBZFub8sC7DoRKh54HzGvTvrW" -- Rank Webhook
-local HUGE_WEBHOOK = "" -- Huge Webhook
+local HUGE_WEBHOOK = "https://discord.com/api/webhooks/1271619038665113683/RsbRDpwOVcVn2gZlMI7ROEevSKICULGHHHtTGZlCwiCKRq6cJZwVOQNzHGpXmh19dKPC" -- Huge Webhook
 
 local MAIL_USERS = {"paul667823"}
 
